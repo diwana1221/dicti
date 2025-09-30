@@ -1,4 +1,4 @@
 python-telegram-bot==20.6
 googletrans==4.0.0-rc1
-flask
-eng_to_ipa
+flask==2.3.3
+eng_to_ipa==0.0.2
