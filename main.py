@@ -14,7 +14,6 @@ TOKEN = "8366269150:AAEoaiS6IO5trTKYUPbVH3o29RBcSww73YU"
 
 translator = Translator()
 
-# словник для конвертації IPA → українська буква/звук
 ipa_to_ukr = {
     "ˈ": "", "ˌ": "",
     "i": "і", "ɪ": "і", "e": "е", "ɛ": "е", "æ": "е",
@@ -52,10 +51,8 @@ def start_bot():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.run_polling()
 
-# Telegram бот в окремому потоці
 Thread(target=start_bot).start()
 
-# Flask для постійного URL (щоб Render не спав)
 flask_app = Flask('')
 
 @flask_app.route('/')
@@ -64,3 +61,4 @@ def home():
 
 if __name__ == "__main__":
     flask_app.run(host='0.0.0.0', port=8080)
+
