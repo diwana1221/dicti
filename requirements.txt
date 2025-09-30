@@ -1,5 +1,5 @@
 python-telegram-bot==20.6
-googletrans-new==1.1.9
+googletrans==4.0.0-rc1
 flask==2.3.3
 eng_to_ipa==0.0.2
 
